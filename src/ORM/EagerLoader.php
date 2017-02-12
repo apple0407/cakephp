@@ -351,10 +351,6 @@ class EagerLoader
                 $options = current($options);
             }
 
-            if (is_string($options)) {
-                $options = (array)$options;
-            }
-
             if (isset($this->_containOptions[$table])) {
                 $pointer[$table] = $options;
                 continue;
@@ -393,7 +389,7 @@ class EagerLoader
                 };
             }
 
-            $pointer[$table] = $options + $pointer[$table];
+            $pointer[$table] = (array)$options + $pointer[$table];
         }
 
         return $result;

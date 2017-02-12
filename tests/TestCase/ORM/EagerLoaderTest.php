@@ -293,8 +293,7 @@ class EagerLoaderTest extends TestCase
             'clients' => [
             ],
             'companies' => [
-                'categories' => [
-                ]
+                'categories'
             ],
         ];
         $this->assertEquals($expected, $loader->contain());
